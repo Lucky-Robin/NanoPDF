@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  nanopdf:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nanopdf
+    ports:
+      - "3000:8000"
+    restart: unless-stopped
