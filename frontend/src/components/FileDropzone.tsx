@@ -11,6 +11,7 @@ interface FileDropzoneProps {
   onFilesSelected: (files: File[]) => void;
   label?: string;
   sublabel?: string;
+  showFileList?: boolean;
 }
 
 export const FileDropzone: React.FC<FileDropzoneProps> = ({
@@ -20,6 +21,7 @@ export const FileDropzone: React.FC<FileDropzoneProps> = ({
   onFilesSelected,
   label = 'Choose files or drag & drop it here',
   sublabel = 'Up to 50 MB per file',
+  showFileList = true,
 }) => {
   const [error, setError] = useState<string | null>(null);
 
@@ -96,7 +98,7 @@ export const FileDropzone: React.FC<FileDropzoneProps> = ({
         </div>
       )}
 
-      {acceptedFiles.length > 0 && !error && (
+      {showFileList && acceptedFiles.length > 0 && !error && (
         <div className="mt-4 space-y-2">
           <h4 className="text-sm font-medium text-gray-700">Selected Files:</h4>
           <ul className="space-y-2">
