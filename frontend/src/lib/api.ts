@@ -67,3 +67,24 @@ export async function getThumbnails(file: File): Promise<string[]> {
   const data = await response.json();
   return data.thumbnails || [];
 }
+
+export async function splitPdf(file: File, mode: 'all' | 'ranges', ranges?: string): Promise<Blob> {
+  const formData = new FormData();
+  formData.append('file', file);
+  formData.append('mode', mode);
+  if (mode === 'ranges' && ranges) {
+    formData.append('ranges', ranges);
+  }
+
+  const response = await fetch(`${API_BASE}/split`, {
+    method: 'POST',
+    body: formData,
+  });
+
+  if (!response.ok) {
+    const error = await response.json().catch(() => ({ detail: 'Unknown error' }));
+    throw new Error(error.detail || `API error: ${response.statusText}`);
+  }
+
+  return response.blob();
+}
