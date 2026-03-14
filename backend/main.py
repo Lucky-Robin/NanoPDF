@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from backend.routes import health
+from backend.routes import health, preview, merge, compress, split, pdf_to_image, image_to_pdf
 
 app = FastAPI(title="NanoPDF", version="0.1.0")
 
@@ -18,6 +18,12 @@ app.add_middleware(
 )
 
 app.include_router(health.router)
+app.include_router(preview.router)
+app.include_router(merge.router)
+app.include_router(compress.router)
+app.include_router(split.router)
+app.include_router(pdf_to_image.router)
+app.include_router(image_to_pdf.router)
 
 
 # TODO: SPA catch-all route - Activated in Task 19
