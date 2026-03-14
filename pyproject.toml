@@ -1,0 +1,22 @@
+[project]
+name = "nanopdf"
+version = "0.1.0"
+description = "A lightweight PDF processing application"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "pymupdf",
+    "python-multipart",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "httpx",
+    "pytest-asyncio",
+]
+
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
