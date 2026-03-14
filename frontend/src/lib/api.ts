@@ -7,8 +7,11 @@ export async function uploadPdf(
 ): Promise<Blob> {
   const formData = new FormData();
   
+  // Use 'files' for multi-file endpoints (merge), 'file' for single-file endpoints (pdf-to-image)
+  const fieldName = endpoint === '/merge' ? 'files' : 'file';
+  
   for (const file of files) {
-    formData.append('files', file);
+    formData.append(fieldName, file);
   }
   
   if (options) {

@@ -154,7 +154,6 @@ export default function Merge() {
       const blob = await uploadPdf('/merge', actualFiles);
       setResultBlob(blob);
     } catch (err: unknown) {
-      console.error('Merge error:', err);
       setError(err instanceof Error ? err.message : 'Failed to merge PDFs');
     } finally {
       setIsProcessing(false);

@@ -57,7 +57,7 @@ function SortableItem({ item, index }: { item: ThumbnailItem; index: number }) {
         <GripVertical className="w-4 h-4" />
       </div>
       <img
-        src={`data:image/png;base64,${item.base64}`}
+        src={item.base64}
         alt={`Page ${item.originalIndex + 1}`}
         className="w-full aspect-[1/1.4] object-contain bg-gray-50 rounded-lg pointer-events-none"
       />

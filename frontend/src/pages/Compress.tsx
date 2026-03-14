@@ -41,7 +41,7 @@ export default function Compress() {
 
     try {
       const formData = new FormData();
-      formData.append('files', file);
+      formData.append('file', file);
       formData.append('target', target.toString());
 
       const response = await fetch('/api/compress', {
