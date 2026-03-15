@@ -63,3 +63,7 @@ build/
 .pytest_cache/
 htmlcov/
 
+# NanoPDF - project specific
+backend/static/
+test-*.pdf
+test-*.png
