@@ -97,7 +97,7 @@ export default function Compress() {
             <div className="space-y-4">
               <div className="flex justify-between items-center">
                 <label className="text-sm font-medium text-gray-700">Compression Target</label>
-                <span className="text-sm font-bold text-[#0165ff] bg-blue-50 px-3 py-1 rounded-full">
+                <span className="text-sm font-bold text-[#0066FF] bg-blue-50 px-3 py-1 rounded-full">
                   {target}% Reduction
                 </span>
               </div>
@@ -108,7 +108,7 @@ export default function Compress() {
                 step="10" 
                 value={target}
                 onChange={(e) => setTarget(Number(e.target.value))}
-                className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[#0165ff]"
+                className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[#0066FF]"
               />
               <div className="flex justify-between text-xs text-gray-400 font-medium">
                 <span>10% (Less compression)</span>
@@ -120,7 +120,7 @@ export default function Compress() {
               <button
                 onClick={handleCompress}
                 disabled={isProcessing}
-                className="bg-[#0165ff] hover:bg-blue-700 text-white px-8 py-3 rounded-xl font-medium transition-colors duration-200 shadow-sm hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
+                className="bg-[#0066FF] hover:bg-blue-700 text-white px-8 py-3 rounded-xl font-medium transition-colors duration-200 shadow-sm hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 Compress PDF
               </button>
@@ -129,7 +129,7 @@ export default function Compress() {
         )}
 
         {stats && compressedBlob && (
-          <div className="bg-gray-50 rounded-xl p-6 border border-gray-100 space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
+          <div className="bg-\[#FAFAFA\] rounded-xl p-6 border border-gray-100 space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
             <h3 className="text-lg font-semibold text-gray-900 border-b border-gray-200 pb-3">Compression Results</h3>
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-white p-4 rounded-lg border border-gray-100 shadow-sm">

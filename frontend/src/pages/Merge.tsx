@@ -56,7 +56,7 @@ function SortableFileItem({
       ref={setNodeRef}
       style={style}
       className={`flex items-center justify-between p-4 mb-3 bg-white border rounded-xl shadow-sm transition-colors ${
-        isDragging ? 'border-[#0165ff] shadow-md opacity-80' : 'border-gray-200 hover:border-gray-300 hover:shadow'
+        isDragging ? 'border-[#0066FF] shadow-md opacity-80' : 'border-gray-200 hover:border-gray-300 hover:shadow'
       }`}
     >
       <div className="flex items-center flex-1 min-w-0">
@@ -68,7 +68,7 @@ function SortableFileItem({
         >
           <GripVertical className="w-5 h-5" />
         </button>
-        <div className="flex items-center justify-center w-10 h-10 mr-3 rounded-lg bg-blue-50 text-[#0165ff] flex-shrink-0">
+        <div className="flex items-center justify-center w-10 h-10 mr-3 rounded-lg bg-blue-50 text-[#0066FF] flex-shrink-0">
           <FileIcon className="w-5 h-5" />
         </div>
         <div className="flex flex-col min-w-0 flex-1">
@@ -191,7 +191,7 @@ export default function Merge() {
           />
 
           {files.length > 0 && (
-            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6">
+            <div className="bg-\[#FAFAFA\] border border-gray-200 rounded-2xl p-6">
               <div className="flex items-center justify-between mb-4">
                 <h2 className="text-lg font-semibold text-gray-900">
                   Files to Merge ({files.length}/20)
@@ -241,9 +241,9 @@ export default function Merge() {
                   <button
                     onClick={handleMerge}
                     disabled={files.length < 2}
-                    className={`w-full max-w-sm py-3 px-4 rounded-xl font-medium text-white transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0165ff] ${
+                    className={`w-full max-w-sm py-3 px-4 rounded-xl font-medium text-white transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0066FF] ${
                       files.length >= 2
-                        ? 'bg-[#0165ff] hover:bg-blue-600 hover:shadow-md active:transform active:scale-[0.98]'
+                        ? 'bg-[#0066FF] hover:bg-blue-600 hover:shadow-md active:transform active:scale-[0.98]'
                         : 'bg-gray-300 cursor-not-allowed'
                     }`}
                   >

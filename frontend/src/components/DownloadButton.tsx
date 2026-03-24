@@ -34,7 +34,7 @@ export const DownloadButton: React.FC<DownloadButtonProps> = ({
         'flex items-center justify-center space-x-2 px-6 py-3 rounded-xl font-medium transition-colors duration-200',
         disabled || !blob
           ? 'bg-gray-300 text-gray-500 cursor-not-allowed opacity-50'
-          : 'bg-[#0165ff] hover:bg-blue-700 text-white shadow-sm hover:shadow-md'
+          : 'bg-[#0066FF] hover:bg-blue-700 text-white shadow-sm hover:shadow-md'
       )}
     >
       <Download className="w-5 h-5" />

@@ -42,14 +42,14 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-full bg-gray-50 py-16 px-4">
-      <div className="max-w-5xl mx-auto space-y-12">
-        <div className="text-center space-y-4">
-          <h1 className="text-4xl font-bold text-gray-900">NanoPDF</h1>
-          <p className="text-gray-500 text-lg">Your local PDF toolkit — fast, private, free</p>
+    <div className="min-h-full bg-[#FAFAFA] py-16 sm:py-24">
+      <div className="max-w-5xl mx-auto">
+        <div className="text-center space-y-4 mb-16">
+          <h1 className="text-[56px] font-black text-[#0066FF] tracking-tight">NanoPDF</h1>
+          <p className="text-xl sm:text-2xl text-gray-700 font-medium">Your local PDF toolkit — fast, private, free</p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 sm:px-0">
           {features.map((feature) => (
             <FeatureCard
               key={feature.href}

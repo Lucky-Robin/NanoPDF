@@ -64,10 +64,10 @@ export const FileDropzone: React.FC<FileDropzoneProps> = ({
         className={clsx(
           'flex flex-col items-center justify-center w-full min-h-[300px] p-6 text-center border-2 border-dashed rounded-2xl cursor-pointer transition-colors duration-200',
           isDragActive
-            ? 'border-[#0165ff] bg-blue-50'
+            ? 'border-[#0066FF] bg-blue-50'
             : error
             ? 'border-red-500 bg-red-50 hover:bg-red-100'
-            : 'border-gray-300 bg-white hover:bg-blue-50 hover:border-[#0165ff]'
+            : 'border-gray-300 bg-white hover:bg-blue-50 hover:border-[#0066FF]'
         )}
       >
         <input {...getInputProps()} />
@@ -75,7 +75,7 @@ export const FileDropzone: React.FC<FileDropzoneProps> = ({
           <div
             className={clsx(
               'p-4 rounded-full',
-              isDragActive || acceptedFiles.length > 0 ? 'bg-[#0165ff] text-white' : 'bg-blue-100 text-[#0165ff]'
+              isDragActive || acceptedFiles.length > 0 ? 'bg-[#0066FF] text-white' : 'bg-blue-100 text-[#0066FF]'
             )}
           >
             {acceptedFiles.length > 0 ? (
@@ -105,7 +105,7 @@ export const FileDropzone: React.FC<FileDropzoneProps> = ({
             {acceptedFiles.map((file: File) => (
               <li
                 key={file.name}
-                className="flex items-center justify-between p-3 text-sm bg-gray-50 border border-gray-200 rounded-lg"
+                className="flex items-center justify-between p-3 text-sm bg-\[#FAFAFA\] border border-gray-200 rounded-lg"
               >
                 <span className="font-medium text-gray-900 truncate">{file.name}</span>
                 <span className="text-gray-500 whitespace-nowrap ml-4">

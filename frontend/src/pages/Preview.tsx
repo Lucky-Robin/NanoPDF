@@ -43,7 +43,7 @@ function SortableItem({ item, index }: { item: ThumbnailItem; index: number }) {
       ref={setNodeRef}
       style={style}
       className={`relative flex flex-col items-center p-2 bg-white rounded-xl shadow-sm border border-gray-200 ${
-        isDragging ? 'shadow-lg border-[#0165ff] opacity-90 scale-105' : 'hover:border-gray-300'
+        isDragging ? 'shadow-lg border-[#0066FF] opacity-90 scale-105' : 'hover:border-gray-300'
       }`}
     >
       <div className="absolute top-2 left-2 px-2 py-0.5 bg-black/60 text-white text-xs font-medium rounded backdrop-blur-sm z-10">
@@ -59,7 +59,7 @@ function SortableItem({ item, index }: { item: ThumbnailItem; index: number }) {
       <img
         src={item.base64}
         alt={`Page ${item.originalIndex + 1}`}
-        className="w-full aspect-[1/1.4] object-contain bg-gray-50 rounded-lg pointer-events-none"
+        className="w-full aspect-[1/1.4] object-contain bg-\[#FAFAFA\] rounded-lg pointer-events-none"
       />
     </div>
   );
@@ -183,14 +183,14 @@ export default function Preview() {
 
       {isPreviewing && (
         <div className="space-y-6">
-          <div className="flex flex-col sm:flex-row justify-between items-center bg-gray-50 p-4 rounded-xl border border-gray-200">
+          <div className="flex flex-col sm:flex-row justify-between items-center bg-\[#FAFAFA\] p-4 rounded-xl border border-gray-200">
             <div className="text-sm font-medium text-gray-700 mb-4 sm:mb-0">
-              <span className="text-[#0165ff] font-bold">{thumbnails.length}</span> pages loaded from {file?.name}
+              <span className="text-[#0066FF] font-bold">{thumbnails.length}</span> pages loaded from {file?.name}
             </div>
             <div className="flex space-x-3">
               <button
                 onClick={resetState}
-                className="flex items-center space-x-2 px-4 py-2 bg-white border border-gray-300 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors"
+                className="flex items-center space-x-2 px-4 py-2 bg-white border border-gray-300 rounded-lg text-sm font-medium text-gray-700 hover:bg-\[#FAFAFA\] transition-colors"
               >
                 <RefreshCw className="w-4 h-4" />
                 <span>Start Over</span>
@@ -204,7 +204,7 @@ export default function Preview() {
                 <button
                   onClick={handleReorder}
                   disabled={isReordering}
-                  className="flex items-center space-x-2 px-4 py-2 bg-[#0165ff] text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="flex items-center space-x-2 px-4 py-2 bg-[#0066FF] text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <span>Download Reordered PDF</span>
                 </button>

@@ -57,7 +57,7 @@ function SortableImageItem({
       ref={setNodeRef}
       style={style}
       className={`flex items-center justify-between p-4 mb-3 bg-white border rounded-xl shadow-sm transition-colors ${
-        isDragging ? 'border-[#0165ff] shadow-md opacity-80' : 'border-gray-200 hover:border-gray-300 hover:shadow'
+        isDragging ? 'border-[#0066FF] shadow-md opacity-80' : 'border-gray-200 hover:border-gray-300 hover:shadow'
       }`}
     >
       <div className="flex items-center flex-1 min-w-0">
@@ -69,7 +69,7 @@ function SortableImageItem({
         >
           <GripVertical className="w-5 h-5" />
         </button>
-        <div className="flex items-center justify-center w-12 h-12 mr-3 rounded-lg overflow-hidden bg-gray-50 flex-shrink-0 border border-gray-100">
+        <div className="flex items-center justify-center w-12 h-12 mr-3 rounded-lg overflow-hidden bg-\[#FAFAFA\] flex-shrink-0 border border-gray-100">
           <img 
             src={imageWithId.previewUrl} 
             alt={imageWithId.file.name} 
@@ -206,7 +206,7 @@ export default function ImageToPdf() {
             </div>
             <button
               onClick={handleReset}
-              className="w-full sm:w-auto px-8 py-3 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
+              className="w-full sm:w-auto px-8 py-3 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-\[#FAFAFA\] hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
             >
               Start Over
             </button>
@@ -277,7 +277,7 @@ export default function ImageToPdf() {
               <button
                 onClick={handleCreatePdf}
                 disabled={images.length === 0}
-                className="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-[#0165ff] hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0165ff] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                className="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-[#0066FF] hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0066FF] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
               >
                 Create PDF
               </button>

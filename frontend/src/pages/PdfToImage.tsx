@@ -86,9 +86,9 @@ export default function PdfToImage() {
 
         {file && !resultBlob && (
           <div className="p-8">
-            <div className="flex items-center justify-between mb-8 p-4 bg-gray-50 rounded-xl border border-gray-200">
+            <div className="flex items-center justify-between mb-8 p-4 bg-\[#FAFAFA\] rounded-xl border border-gray-200">
               <div className="flex items-center space-x-3">
-                <div className="p-2 bg-blue-100 text-[#0165ff] rounded-lg">
+                <div className="p-2 bg-blue-100 text-[#0066FF] rounded-lg">
                   <ImageIcon className="w-6 h-6" />
                 </div>
                 <div>
@@ -113,7 +113,7 @@ export default function PdfToImage() {
                   Conversion Settings
                 </h3>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 border border-gray-200 rounded-xl bg-gray-50">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 border border-gray-200 rounded-xl bg-\[#FAFAFA\]">
                   <div>
                     <label className="block text-sm font-medium text-gray-900 mb-3">
                       Output Format
@@ -125,7 +125,7 @@ export default function PdfToImage() {
                           value="png"
                           checked={format === 'png'}
                           onChange={(e) => setFormat(e.target.value as 'png' | 'jpeg')}
-                          className="w-4 h-4 text-[#0165ff] border-gray-300 focus:ring-[#0165ff]"
+                          className="w-4 h-4 text-[#0066FF] border-gray-300 focus:ring-[#0066FF]"
                         />
                         <span className="ml-2 text-gray-700 font-medium">PNG</span>
                       </label>
@@ -135,7 +135,7 @@ export default function PdfToImage() {
                           value="jpeg"
                           checked={format === 'jpeg'}
                           onChange={(e) => setFormat(e.target.value as 'png' | 'jpeg')}
-                          className="w-4 h-4 text-[#0165ff] border-gray-300 focus:ring-[#0165ff]"
+                          className="w-4 h-4 text-[#0066FF] border-gray-300 focus:ring-[#0066FF]"
                         />
                         <span className="ml-2 text-gray-700 font-medium">JPEG</span>
                       </label>
@@ -154,7 +154,7 @@ export default function PdfToImage() {
                         max={300}
                         value={dpi}
                         onChange={(e) => setDpi(Number(e.target.value))}
-                        className="block w-24 rounded-lg border-gray-300 shadow-sm focus:border-[#0165ff] focus:ring-[#0165ff] sm:text-sm px-3 py-2 border"
+                        className="block w-24 rounded-lg border-gray-300 shadow-sm focus:border-[#0066FF] focus:ring-[#0066FF] sm:text-sm px-3 py-2 border"
                       />
                       <span className="text-sm text-gray-500">pixels per inch</span>
                     </div>
@@ -168,7 +168,7 @@ export default function PdfToImage() {
               <button
                 onClick={handleConvert}
                 disabled={isProcessing}
-                className="flex items-center justify-center space-x-2 w-full sm:w-auto px-8 py-3 bg-[#0165ff] text-white rounded-xl font-medium hover:bg-blue-700 transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0165ff] disabled:opacity-50 disabled:cursor-not-allowed shadow-sm hover:shadow-md"
+                className="flex items-center justify-center space-x-2 w-full sm:w-auto px-8 py-3 bg-[#0066FF] text-white rounded-xl font-medium hover:bg-blue-700 transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0066FF] disabled:opacity-50 disabled:cursor-not-allowed shadow-sm hover:shadow-md"
               >
                 <span>Convert to Images</span>
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -178,7 +178,7 @@ export default function PdfToImage() {
         )}
 
         {resultBlob && (
-          <div className="p-12 text-center bg-gray-50">
+          <div className="p-12 text-center bg-\[#FAFAFA\]">
             <div className="w-20 h-20 mx-auto bg-green-100 rounded-full flex items-center justify-center mb-6 shadow-sm">
               <ImageIcon className="w-10 h-10 text-green-600" />
             </div>
@@ -193,7 +193,7 @@ export default function PdfToImage() {
               />
               <button
                 onClick={resetState}
-                className="px-6 py-3 text-gray-700 bg-white border border-gray-200 hover:bg-gray-50 hover:text-gray-900 rounded-xl font-medium transition-colors shadow-sm"
+                className="px-6 py-3 text-gray-700 bg-white border border-gray-200 hover:bg-\[#FAFAFA\] hover:text-gray-900 rounded-xl font-medium transition-colors shadow-sm"
               >
                 Convert Another File
               </button>

@@ -74,7 +74,7 @@ export default function Split() {
             />
 
             {file && (
-              <div className="space-y-6 bg-gray-50 p-6 rounded-xl border border-gray-100">
+              <div className="space-y-6 bg-\[#FAFAFA\] p-6 rounded-xl border border-gray-100">
                 <div className="space-y-4">
                   <h3 className="text-lg font-medium text-gray-900">Split Mode</h3>
                   <div className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-6">
@@ -84,7 +84,7 @@ export default function Split() {
                         value="all"
                         checked={mode === 'all'}
                         onChange={(e) => setMode(e.target.value as 'all' | 'ranges')}
-                        className="w-4 h-4 text-[#0165ff] border-gray-300 focus:ring-[#0165ff]"
+                        className="w-4 h-4 text-[#0066FF] border-gray-300 focus:ring-[#0066FF]"
                       />
                       <span className="ml-2 text-gray-700 group-hover:text-gray-900">
                         Split into individual pages
@@ -96,7 +96,7 @@ export default function Split() {
                         value="ranges"
                         checked={mode === 'ranges'}
                         onChange={(e) => setMode(e.target.value as 'all' | 'ranges')}
-                        className="w-4 h-4 text-[#0165ff] border-gray-300 focus:ring-[#0165ff]"
+                        className="w-4 h-4 text-[#0066FF] border-gray-300 focus:ring-[#0066FF]"
                       />
                       <span className="ml-2 text-gray-700 group-hover:text-gray-900">
                         Custom ranges
@@ -116,7 +116,7 @@ export default function Split() {
                       value={ranges}
                       onChange={(e) => setRanges(e.target.value)}
                       placeholder="e.g. 1-3, 5, 7-9"
-                      className="block w-full rounded-lg border-gray-300 shadow-sm focus:border-[#0165ff] focus:ring-[#0165ff] sm:text-sm px-4 py-2 border"
+                      className="block w-full rounded-lg border-gray-300 shadow-sm focus:border-[#0066FF] focus:ring-[#0066FF] sm:text-sm px-4 py-2 border"
                     />
                     <p className="text-xs text-gray-500">
                       Separate ranges with commas. Example: 1-3, 5, 7-9
@@ -128,7 +128,7 @@ export default function Split() {
                   <button
                     onClick={handleSplit}
                     disabled={isProcessing || !file || (mode === 'ranges' && !ranges.trim())}
-                    className="px-6 py-2.5 bg-[#0165ff] text-white font-medium rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                    className="px-6 py-2.5 bg-[#0066FF] text-white font-medium rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                   >
                     Split PDF
                   </button>
